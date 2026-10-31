@@ -1,0 +1,272 @@
+{
+  "day": "2026-10-26",
+  "publishedAt": "2026-10-31T02:06:31.624Z",
+  "classes": [
+    {
+      "time": "09:30",
+      "trainer": "Aida",
+      "attendees": [
+        {
+          "name": "Adrian R.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Ana T.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Andrea B.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Cristina A.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "María R.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Yolanda F.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "10:30",
+      "trainer": "Aida",
+      "attendees": [
+        {
+          "name": "Adriana M.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Miriam C.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Rebeca P.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "17:30",
+      "trainer": "Rebeca",
+      "attendees": [
+        {
+          "name": "Alejandro C.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Emma G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Hugo R.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Maria I.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Sandra L.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Theo M.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "19:30",
+      "trainer": "Rebeca",
+      "attendees": [
+        {
+          "name": "Alba P.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Alejandro C.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "ANA L.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Anaís A.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Elia D.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Javier L.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Jennifer C.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Jordi N.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Laura G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "LETICIA G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Luis R.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Noëlle D.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Sonia G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Soraya P.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Yolanda G.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "20:30",
+      "trainer": "Rebeca",
+      "attendees": [
+        {
+          "name": "Paola C.",
+          "points": 14,
+          "rules": [
+            "Regreso tras 14 días"
+          ]
+        },
+        {
+          "name": "Adriana M.",
+          "points": 7,
+          "rules": [
+            "Doblete diario",
+            "Rutina semanal (2.º)"
+          ]
+        },
+        {
+          "name": "Aida P.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Alba M.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Cristina Y.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Elissa D.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Iñigo G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Maria G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Rebeca G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Rubén G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Yolanda S.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "21:30",
+      "trainer": "Alicia",
+      "attendees": [
+        {
+          "name": "David F.",
+          "points": 34,
+          "rules": [
+            "Regreso tras 14 días",
+            "Regreso tras un mes"
+          ]
+        },
+        {
+          "name": "Cristina E.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Greyson R.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    }
+  ],
+  "other": [],
+  "points": 55
+}
