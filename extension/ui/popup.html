@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="ui.css">
+</head>
+<body class="popup">
+  <h1>Liga Fitboxers</h1>
+  <label>Día <input id="day" type="date"></label>
+  <div class="actions">
+    <button id="publish">Publicar resultados del día</button>
+  </div>
+  <div class="actions">
+    <button id="publish-league" class="secondary">Releer y publicar toda la liga</button>
+  </div>
+  <p id="msg"></p>
+  <dl id="stats"></dl>
+  <h2>Clasificación</h2>
+  <ol id="top"></ol>
+  <p><a href="options.html" target="_blank">Opciones</a> <span id="version" class="hint"></span></p>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

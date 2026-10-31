@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Opciones · Liga Fitboxers</title>
+<link rel="stylesheet" href="ui.css">
+</head>
+<body class="options">
+<main>
+  <h1>Opciones de la liga</h1>
+
+  <section>
+    <h2>Liga</h2>
+    <label>Nombre <input id="league-name"></label>
+    <label>Inicio <input id="league-start" type="date"></label>
+    <label>Fin <input id="league-end" type="date"></label>
+    <label>Zona horaria <input id="league-tz"></label>
+    <label>Duración de la clase (min) <input id="class-duration" type="number" min="1"></label>
+  </section>
+
+  <section>
+    <h2>Reglas</h2>
+    <table id="rules"><thead><tr><th>Activa</th><th>Regla</th><th>Umbral</th><th>Puntos</th></tr></thead><tbody></tbody></table>
+    <label>Rutina semanal: puntos del 1.º al 7.º entrenamiento (separados por comas)
+      <input id="weekly-points"></label>
+    <label>Mínimo de entrenamientos por semana para las rachas
+      <input id="streak-min" type="number" min="1"></label>
+  </section>
+
+  <section>
+    <h2>Publicación en GitHub</h2>
+    <p class="hint">Al publicar se suben los resultados a la carpeta data/ del repositorio y GitHub Actions actualiza la web.</p>
+    <label>Usuario u organización <input id="gh-owner"></label>
+    <label>Repositorio <input id="gh-repo"></label>
+    <label>Rama <input id="gh-branch"></label>
+    <label>Token (fine-grained, solo permiso "Contents" en este repo)
+      <input id="gh-token" type="password" autocomplete="off"></label>
+    <p class="hint">El token se guarda solo en este navegador. No se sube nunca al repositorio.</p>
+  </section>
+
+  <div class="actions">
+    <button id="save">Guardar y recalcular</button>
+    <span id="msg"></span>
+  </div>
+
+  <section>
+    <h2>Referidos</h2>
+    <p class="hint">La app no guarda quién recomendó a quién, así que se apunta aquí. Las fechas de la clase de iniciación y del alta se leen de la ficha del fitboxer en la app.</p>
+    <label>Fitboxer nuevo <select id="ref-referred"></select></label>
+    <label>Le recomendó <select id="ref-referrer"></select></label>
+    <div class="actions"><button id="ref-add">Apuntar referido</button><span id="ref-msg"></span></div>
+    <table id="ref-list"><thead><tr><th>Nuevo</th><th>Recomendado por</th><th>Iniciación</th><th>Alta</th><th></th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section>
+    <h2>Copia de seguridad</h2>
+    <button id="export">Exportar datos</button>
+    <label class="file">Importar datos <input id="import" type="file" accept="application/json"></label>
+  </section>
+</main>
+<script type="module" src="options.js"></script>
+</body>
+</html>

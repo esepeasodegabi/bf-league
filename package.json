@@ -1,0 +1,9 @@
+{
+  "name": "bf-league",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "build": "node site/build.mjs"
+  }
+}
