@@ -1,7 +1,169 @@
 {
   "day": "2026-10-31",
-  "publishedAt": "2026-10-31T02:06:09.272Z",
-  "classes": [],
+  "publishedAt": "2026-10-31T12:01:15.247Z",
+  "classes": [
+    {
+      "time": "10:00",
+      "trainer": "Alicia",
+      "attendees": [
+        {
+          "name": "Esteban V.",
+          "points": 8,
+          "rules": [
+            "Rutina semanal (5.º)"
+          ]
+        },
+        {
+          "name": "Anaís A.",
+          "points": 7,
+          "rules": [
+            "Rutina semanal (4.º)"
+          ]
+        },
+        {
+          "name": "Celia L.",
+          "points": 7,
+          "rules": [
+            "Rutina semanal (4.º)"
+          ]
+        },
+        {
+          "name": "Clara V.",
+          "points": 6,
+          "rules": [
+            "Rutina semanal (3.º)"
+          ]
+        },
+        {
+          "name": "Joaquin P.",
+          "points": 6,
+          "rules": [
+            "Rutina semanal (3.º)"
+          ]
+        },
+        {
+          "name": "Sandra L.",
+          "points": 5,
+          "rules": [
+            "Rutina semanal (2.º)"
+          ]
+        },
+        {
+          "name": "Theo M.",
+          "points": 5,
+          "rules": [
+            "Rutina semanal (2.º)"
+          ]
+        },
+        {
+          "name": "Elisa A.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Ignacio P.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "11:00",
+      "trainer": "Alicia",
+      "attendees": [
+        {
+          "name": "Lorena F.",
+          "points": 34,
+          "rules": [
+            "Regreso tras 14 días",
+            "Regreso tras un mes"
+          ]
+        },
+        {
+          "name": "Anaís A.",
+          "points": 10,
+          "rules": [
+            "Doblete diario",
+            "Rutina semanal (5.º)"
+          ]
+        },
+        {
+          "name": "Adriana M.",
+          "points": 9,
+          "rules": [
+            "Rutina semanal (6.º)"
+          ]
+        },
+        {
+          "name": "Emma G.",
+          "points": 7,
+          "rules": [
+            "Rutina semanal (4.º)"
+          ]
+        },
+        {
+          "name": "JUAN N.",
+          "points": 7,
+          "rules": [
+            "Rutina semanal (4.º)"
+          ]
+        },
+        {
+          "name": "Luis R.",
+          "points": 7,
+          "rules": [
+            "Rutina semanal (4.º)"
+          ]
+        },
+        {
+          "name": "Rebeca G.",
+          "points": 6,
+          "rules": [
+            "Rutina semanal (3.º)"
+          ]
+        },
+        {
+          "name": "Rubén G.",
+          "points": 6,
+          "rules": [
+            "Rutina semanal (3.º)"
+          ]
+        },
+        {
+          "name": "Nerea M.",
+          "points": 5,
+          "rules": [
+            "Rutina semanal (2.º)"
+          ]
+        },
+        {
+          "name": "Abigaíl B.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "maite P.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "MARIA G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Miriam T.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Rebeca K.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    }
+  ],
   "other": [],
-  "points": 0
+  "points": 135
 }
