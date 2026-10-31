@@ -1,0 +1,609 @@
+{
+  "name": "Liga Fitboxers",
+  "start": "2026-10-26",
+  "end": "2026-11-01",
+  "timeZone": "Europe/Madrid",
+  "updatedAt": "2026-10-31T01:49:21.420Z",
+  "standings": [
+    {
+      "pos": 1,
+      "name": "LETICIA G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Jordi N.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Cristina A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Beatriz V.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Noelia B.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Laura G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Yolanda D.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Cristina E.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Clara V.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Ana B.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Yolanda F.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Andrea L.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Jennifer C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Estefania R.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "María I.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Rubén G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Rebeca G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Alicia G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Maria C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Soraya P.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Alba M.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Beatriz R.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Adrian R.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Yolanda S.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Lois R.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Sonia B.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Joaquin P.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "David A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Noa M.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Alba P.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Hugo R.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Laura G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Silvia C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Myriam C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Belén A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Cristina F.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Uxia G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Aida P.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "M V.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Eva D.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Iria D.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Sonia G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Celia M.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "JUAN J.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "CESAR F.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Alejandro C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Luis G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Matilde F.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Ana F.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Alba A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Esteban V.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Maria L.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Javier L.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Anaís A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "María J.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Raquel A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Nuria L.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Elena N.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "ISABEL I.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Diego L.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Nieves P.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Emma G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "David F.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Aixa I.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Miriam C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Yolanda G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Elvira S.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Ana B.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Paola C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Jorge A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Ainhoa P.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Patricia G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Noelia F.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Anxela V.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Maria D.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Cristina Y.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "LUCY L.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "María M.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Iñigo G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "LEONARDO D.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Greyson G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Pablo A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "VERONICA D.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Theo M.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Sandra L.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Uxia S.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Elissa D.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Xoana R.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "lucia R.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Nerea M.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Leticia C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Alejandro C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Elia D.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "cecilia A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "xela C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Chus F.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "DIANA D.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Rebeca P.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Montse B.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Ana S.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Patricia G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Jose A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "ANA M.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "EDEN V.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Andrea M.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Carlos A.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Andrea B.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "SANDRA E.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Ana V.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Noelia V.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Verónica P.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Jeimy K.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Susana F.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Belén C.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Adriana M.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Noëlle D.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Melodie I.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Uxia G.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Marta R.",
+      "points": 0
+    },
+    {
+      "pos": 1,
+      "name": "Maryorie G.",
+      "points": 0
+    }
+  ]
+}
