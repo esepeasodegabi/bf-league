@@ -7,8 +7,6 @@ import { buildPublication, displayName } from './lib/publish.js';
 import { commitFiles } from './lib/github.js';
 
 const APP_URL = 'https://myh4c.brooklynfitzone.com/*';
-// La ficha de cada fitboxer (su historial) se vuelve a leer como mucho una vez cada 20 horas.
-const PROFILE_REFRESH_MS = 20 * 3600 * 1000;
 
 async function hash(text) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
@@ -105,29 +103,26 @@ async function askPage(message) {
     throw new Error('Recarga la pestaña de la app del club (F5) y vuelve a pulsar Publicar.');
   }
   if (!r || !r.ok) throw new Error(r?.error || 'No se pudo leer la app. Recarga la pestaña de la app y vuelve a intentarlo.');
-  return r.captures;
+  return r;
 }
 
-/** Lee de la app las clases terminadas del día, sus asistentes y el historial de cada asistente. */
+/** Lee de la app las clases terminadas del día y sus asistentes. */
 async function syncDay(day) {
   const settings = await getSettings();
-  const captures = await askPage({ type: 'sync-page', day });
-  for (const c of captures) await storeCapture(c, settings);
-
-  // Historial de los asistentes del día, para contar bien semanas, rachas y regresos.
   const tz = settings.config.league.timeZone;
-  const classes = (await getAll('classes')).filter((c) => c.detail && localDay(c.start, tz) === day);
-  const attendees = new Set(classes.flatMap((c) => c.attendees || []));
-  const now = Date.now();
-  const stale = (await getAll('members'))
-    .filter((m) => attendees.has(m.id) && (!m.profileSyncedAt || now - Date.parse(m.profileSyncedAt) > PROFILE_REFRESH_MS))
-    .map((m) => m.id);
-  if (stale.length) {
-    for (const c of await askPage({ type: 'profiles-page', ids: stale })) await storeCapture(c, settings);
+  const list = await askPage({ type: 'list-page', day });
+  for (const c of list.captures) await storeCapture(c, settings);
+
+  // El listado se pide del día al siguiente: solo se leen las clases que empiezan ese día.
+  const wanted = new Set(list.ids);
+  const ids = (await getAll('classes')).filter((c) => wanted.has(c.id) && localDay(c.start, tz) === day).map((c) => c.id);
+  if (ids.length) {
+    const detail = await askPage({ type: 'details-page', ids });
+    for (const c of detail.captures) await storeCapture(c, settings);
   }
 
   await recalculate(settings);
-  return { classes: Math.max(0, captures.length - 1), profiles: stale.length };
+  return { classes: ids.length, profiles: 0 };
 }
 
 async function publishDay(day) {

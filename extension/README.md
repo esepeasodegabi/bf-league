@@ -5,7 +5,7 @@ calcula los puntos de la liga y publica los resultados en GitHub Pages.
 
 ## Cómo funciona
 1. Tienes la app del club abierta en Chrome con la sesión iniciada.
-2. En la extensión eliges el día y pulsas **Publicar resultados del día**. La extensión pide a la app las clases terminadas de ese día, sus asistentes y la ficha de cada asistente (su historial de entrenamientos), con tu misma sesión. No guarda contraseñas, cookies, correos, teléfonos ni pagos.
+2. En la extensión eliges el día y pulsas **Publicar resultados del día**. La extensión pide a la app las clases terminadas de ese día, y sus asistentes, con tu misma sesión. (Desde el cambio de la app de noviembre de 2026 todavía no se lee la ficha de cada fitboxer: el historial de antes de lo publicado y las fechas de iniciación y alta de los referidos quedan pendientes.) No guarda contraseñas, cookies, correos, teléfonos ni pagos.
 3. El motor de reglas (`extension/engine/`) recalcula todos los puntos. Procesar dos veces lo mismo no duplica nada, y las correcciones quedan en el historial.
 4. Se suben en un único commit `data/league.json` (clasificación) y `data/days/AAAA-MM-DD.json` (resultados del día). Solo nombre e inicial del apellido.
 5. La GitHub Action `.github/workflows/pages.yml` construye la web (`site/build.mjs`) y la publica en GitHub Pages.

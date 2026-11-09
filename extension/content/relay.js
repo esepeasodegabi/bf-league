@@ -13,9 +13,10 @@ window.addEventListener('message', (e) => {
 });
 
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
-  if (msg?.type !== 'sync-page' && msg?.type !== 'profiles-page') return false;
+  const cmd = { 'list-page': 'list', 'details-page': 'details' }[msg?.type];
+  if (!cmd) return false;
   const id = crypto.randomUUID();
   pending.set(id, sendResponse);
-  window.postMessage({ source: 'liga-fitboxers-cmd', id, cmd: msg.type === 'sync-page' ? 'sync' : 'profiles', day: msg.day, ids: msg.ids }, location.origin);
+  window.postMessage({ source: 'liga-fitboxers-cmd', id, cmd, day: msg.day, ids: msg.ids }, location.origin);
   return true;
 });
