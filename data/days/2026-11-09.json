@@ -1,0 +1,239 @@
+{
+  "day": "2026-11-09",
+  "publishedAt": "2026-11-09T21:54:33.742Z",
+  "classes": [
+    {
+      "time": "09:30",
+      "trainer": "Aida",
+      "attendees": [
+        {
+          "name": "Adrian R.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Andrea B.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Esteban V.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "JUAN J.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "10:30",
+      "trainer": "Aida",
+      "attendees": [
+        {
+          "name": "Adriana M.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Lois R.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "M V.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Susana F.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "17:30",
+      "trainer": "Rebeca",
+      "attendees": [
+        {
+          "name": "Aida P.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Alba P.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Ane C.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "19:30",
+      "trainer": "Rebeca",
+      "attendees": [
+        {
+          "name": "Alejandro C.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Alexandra G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "ANA M.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Carlos A.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Elia D.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Hugo R.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Jennifer C.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "LETICIA G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Luis G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Maria L.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Noëlle D.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Patricia G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Sonia G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Yolanda G.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "20:30",
+      "trainer": "Rebeca",
+      "attendees": [
+        {
+          "name": "Ana S.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Cristina Y.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "DIANA D.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Elissa D.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Iñigo G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Laura G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "LEONARDO D.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "María M.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Montse B.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Rebeca G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Rubén G.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "VERONICA D.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    },
+    {
+      "time": "21:30",
+      "trainer": "Alicia",
+      "attendees": [
+        {
+          "name": "Cristina E.",
+          "points": 0,
+          "rules": []
+        },
+        {
+          "name": "Greyson G.",
+          "points": 0,
+          "rules": []
+        }
+      ]
+    }
+  ],
+  "other": [],
+  "points": 0
+}

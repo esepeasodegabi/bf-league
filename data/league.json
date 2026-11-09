@@ -1,294 +1,243 @@
 {
   "name": "Liga Fitboxers",
-  "start": "2026-10-26",
-  "end": "2026-11-01",
+  "start": "2026-11-09",
+  "end": "2026-11-22",
   "timeZone": "Europe/Madrid",
-  "updatedAt": "2026-10-31T12:02:14.150Z",
+  "updatedAt": "2026-11-09T21:54:33.742Z",
   "standings": [
     {
       "pos": 1,
-      "name": "David F.",
-      "points": 45
-    },
-    {
-      "pos": 2,
-      "name": "Adriana M.",
-      "points": 37
-    },
-    {
-      "pos": 3,
-      "name": "Lorena F.",
-      "points": 34
-    },
-    {
-      "pos": 4,
-      "name": "Anaís A.",
-      "points": 28
-    },
-    {
-      "pos": 5,
-      "name": "Esteban V.",
-      "points": 26
-    },
-    {
-      "pos": 5,
-      "name": "Andrea B.",
-      "points": 26
-    },
-    {
-      "pos": 7,
-      "name": "Paola C.",
-      "points": 19
-    },
-    {
-      "pos": 8,
-      "name": "Ana T.",
-      "points": 18
-    },
-    {
-      "pos": 8,
-      "name": "Celia L.",
-      "points": 18
-    },
-    {
-      "pos": 8,
-      "name": "JUAN N.",
-      "points": 18
-    },
-    {
-      "pos": 8,
-      "name": "Luis R.",
-      "points": 18
-    },
-    {
-      "pos": 8,
-      "name": "Emma G.",
-      "points": 18
-    },
-    {
-      "pos": 8,
-      "name": "Miriam C.",
-      "points": 18
-    },
-    {
-      "pos": 8,
-      "name": "Iñigo G.",
-      "points": 18
-    },
-    {
-      "pos": 8,
-      "name": "Greyson R.",
-      "points": 18
-    },
-    {
-      "pos": 8,
-      "name": "Elissa D.",
-      "points": 18
-    },
-    {
-      "pos": 17,
-      "name": "Cristina A.",
-      "points": 11
-    },
-    {
-      "pos": 17,
-      "name": "Clara V.",
-      "points": 11
-    },
-    {
-      "pos": 17,
-      "name": "Yolanda F.",
-      "points": 11
-    },
-    {
-      "pos": 17,
-      "name": "Rubén G.",
-      "points": 11
-    },
-    {
-      "pos": 17,
-      "name": "Rebeca G.",
-      "points": 11
-    },
-    {
-      "pos": 17,
-      "name": "Yolanda S.",
-      "points": 11
-    },
-    {
-      "pos": 17,
-      "name": "Joaquin P.",
-      "points": 11
-    },
-    {
-      "pos": 17,
-      "name": "Alba P.",
-      "points": 11
-    },
-    {
-      "pos": 17,
-      "name": "Laura G.",
-      "points": 11
-    },
-    {
-      "pos": 17,
-      "name": "Aida P.",
-      "points": 11
-    },
-    {
-      "pos": 17,
-      "name": "ANA L.",
-      "points": 11
-    },
-    {
-      "pos": 28,
       "name": "LETICIA G.",
-      "points": 5
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 28,
+      "pos": 1,
       "name": "Cristina E.",
-      "points": 5
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 28,
+      "pos": 1,
       "name": "Jennifer C.",
-      "points": 5
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 28,
-      "name": "María R.",
-      "points": 5
+      "pos": 1,
+      "name": "Rubén G.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 28,
-      "name": "Soraya P.",
-      "points": 5
+      "pos": 1,
+      "name": "Rebeca G.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 28,
-      "name": "Alba M.",
-      "points": 5
-    },
-    {
-      "pos": 28,
+      "pos": 1,
       "name": "Adrian R.",
-      "points": 5
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 28,
-      "name": "Yolanda G.",
-      "points": 5
+      "pos": 1,
+      "name": "Lois R.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 28,
-      "name": "Maria G.",
-      "points": 5
+      "pos": 1,
+      "name": "Alba P.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 28,
-      "name": "Cristina Y.",
-      "points": 5
-    },
-    {
-      "pos": 28,
-      "name": "Theo M.",
-      "points": 5
-    },
-    {
-      "pos": 28,
-      "name": "Sandra L.",
-      "points": 5
-    },
-    {
-      "pos": 28,
-      "name": "Nerea M.",
-      "points": 5
-    },
-    {
-      "pos": 28,
-      "name": "Alejandro C.",
-      "points": 5
-    },
-    {
-      "pos": 28,
-      "name": "Elia D.",
-      "points": 5
-    },
-    {
-      "pos": 43,
-      "name": "Jordi N.",
-      "points": 0
-    },
-    {
-      "pos": 43,
-      "name": "Rebeca K.",
-      "points": 0
-    },
-    {
-      "pos": 43,
-      "name": "MARIA G.",
-      "points": 0
-    },
-    {
-      "pos": 43,
-      "name": "Ignacio P.",
-      "points": 0
-    },
-    {
-      "pos": 43,
+      "pos": 1,
       "name": "Hugo R.",
-      "points": 0
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 43,
-      "name": "Miriam T.",
-      "points": 0
+      "pos": 1,
+      "name": "Laura G.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 43,
+      "pos": 1,
+      "name": "Alexandra G.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Ane C.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Aida P.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "M V.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
       "name": "Sonia G.",
-      "points": 0
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 43,
+      "pos": 1,
+      "name": "JUAN J.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Luis G.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Esteban V.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Maria L.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Yolanda G.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Cristina Y.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "María M.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Iñigo G.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "LEONARDO D.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Greyson G.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "VERONICA D.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Elissa D.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
       "name": "Alejandro C.",
-      "points": 0
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 43,
-      "name": "maite P.",
-      "points": 0
+      "pos": 1,
+      "name": "Elia D.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 43,
-      "name": "Maria I.",
-      "points": 0
+      "pos": 1,
+      "name": "DIANA D.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 43,
-      "name": "Javier L.",
-      "points": 0
+      "pos": 1,
+      "name": "Montse B.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 43,
-      "name": "Rebeca P.",
-      "points": 0
+      "pos": 1,
+      "name": "Ana S.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 43,
-      "name": "Elisa A.",
-      "points": 0
+      "pos": 1,
+      "name": "Patricia G.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 43,
-      "name": "Abigaíl B.",
-      "points": 0
+      "pos": 1,
+      "name": "ANA M.",
+      "points": 0,
+      "detail": []
     },
     {
-      "pos": 43,
+      "pos": 1,
+      "name": "Carlos A.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Andrea B.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Susana F.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
+      "name": "Adriana M.",
+      "points": 0,
+      "detail": []
+    },
+    {
+      "pos": 1,
       "name": "Noëlle D.",
-      "points": 0
+      "points": 0,
+      "detail": []
     }
   ]
 }
