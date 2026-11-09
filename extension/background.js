@@ -1,5 +1,5 @@
 import { parseCapture, stripPersonalData, referralEvents } from './lib/adapter.js';
-import { putAll, getAll, deleteKeys, applyRewards, exportAll, importAll } from './lib/db.js';
+import { putAll, getAll, deleteKeys, applyRewards, exportAll, importAll, clearAll } from './lib/db.js';
 import { computeRewards, reconcile, standings } from './engine/engine.js';
 import { localDay, addDays } from './engine/dates.js';
 import { getSettings } from './lib/settings.js';
@@ -237,6 +237,7 @@ const handlers = {
   removeReferral: (msg) => serial(() => removeReferral(msg)),
   export: () => exportAll(),
   import: (msg) => serial(() => importAll(msg.dump).then(() => recalculate())),
+  clear: () => serial(() => clearAll()),
 };
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {

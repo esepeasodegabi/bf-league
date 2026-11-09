@@ -20,3 +20,4 @@ button.secondary { background: #fff; color: #e30613; border: 1px solid #e30613; 
 .options td input[type=number] { display: inline-block !important; width: 80px !important; margin: 0 !important; }
 .options select { display: block; width: 100%; max-width: 360px; padding: 6px 8px; margin-top: 4px; font: inherit; }
 #ref-list button { padding: 4px 10px; }
+.danger { margin-top: 32px; padding-top: 8px; border-top: 1px solid #eee; }
