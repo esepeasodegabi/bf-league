@@ -41,10 +41,39 @@ ${body}
 `;
 }
 
-function standingsHtml() {
+const shortDate = (day) => new Intl.DateTimeFormat('es-ES', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' }).format(new Date(`${day}T12:00:00Z`));
+
+// Desglose de un fitboxer: sus puntos agrupados por día, con la clase y la regla.
+function detailHtml(r, dayLinks) {
+  if (!Array.isArray(r.detail)) return '<p class="empty">El desglose aparecerá con la próxima publicación.</p>';
+  if (!r.detail.length) return '<p class="empty">Todavía no ha sumado puntos.</p>';
+  const byDay = new Map();
+  for (const x of r.detail) {
+    if (!byDay.has(x.day)) byDay.set(x.day, []);
+    byDay.get(x.day).push(x);
+  }
+  return [...byDay].map(([day, items]) => {
+    const total = items.reduce((s, x) => s + x.points, 0);
+    const title = dayLinks.has(day) ? `<a href="dias/${day}.html">${esc(shortDate(day))}</a>` : esc(shortDate(day));
+    return `<div class="detail-day">
+      <div class="detail-head"><span>${title}</span><span class="pts">+${total}</span></div>
+      <ul>
+${items.map((x) => `        <li><span class="when">${x.time ? esc(x.time) : ''}</span><span class="rule">${esc(x.rule)}</span><span class="pts">+${x.points}</span></li>`).join('\n')}
+      </ul>
+    </div>`;
+  }).join('\n');
+}
+
+function standingsHtml(dayLinks) {
   if (!league.standings.length) return '<p class="empty">Todavía no hay puntos.</p>';
-  return `<ol class="board">
-${league.standings.map((r) => `  <li class="${r.pos <= 3 ? 'top' : ''}"><span class="pos">${r.pos}</span><span class="name">${esc(r.name)}</span><span class="pts">${r.points}</span></li>`).join('\n')}
+  return `<p class="hint">Pulsa en un fitboxer para ver en qué día y con qué regla ha conseguido cada punto.</p>
+<ol class="board">
+${league.standings.map((r) => `  <li class="${r.pos <= 3 ? 'top' : ''}"><details>
+    <summary><span class="pos">${r.pos}</span><span class="name">${esc(r.name)}</span><span class="pts">${r.points}</span><span class="chev" aria-hidden="true"></span></summary>
+    <div class="detail">
+    ${detailHtml(r, dayLinks)}
+    </div>
+  </details></li>`).join('\n')}
 </ol>`;
 }
 
@@ -82,7 +111,7 @@ ${days.map((d) => `  <li><a href="dias/${d.day}.html">${esc(longDate(d.day))}</a
 
 writeFileSync(join(out, 'index.html'), page(league.name, `${header()}
 <h2>Clasificación</h2>
-${standingsHtml()}
+${standingsHtml(new Set(days.map((d) => d.day)))}
 ${latest ? `<h2>Resultados del ${esc(longDate(latest.day))}</h2>\n${dayHtml(latest)}` : ''}
 ${history}`));
 

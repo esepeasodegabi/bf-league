@@ -30,16 +30,33 @@ export function buildPublication({ day, classes, rewards, members, config, now =
   const byId = new Map(members.map((m) => [m.id, m]));
   const name = (id) => displayName(byId.get(id));
 
+  const time = new Intl.DateTimeFormat('es-ES', { timeZone: tz, hour: '2-digit', minute: '2-digit' });
+
+  // Hora de la clase de cada entrenamiento, para el desglose de cada fitboxer.
+  const classTime = new Map();
+  for (const c of classes) {
+    if (!c.start || !Array.isArray(c.attendees)) continue;
+    for (const memberId of c.attendees) classTime.set(c.sessions?.[memberId] ?? `${c.id}:${memberId}`, time.format(new Date(c.start)));
+  }
+  const rewardsByMember = new Map();
+  for (const r of [...rewards].sort((a, b) => (a.at < b.at ? -1 : a.at > b.at ? 1 : 0))) {
+    if (!rewardsByMember.has(r.memberId)) rewardsByMember.set(r.memberId, []);
+    rewardsByMember.get(r.memberId).push({ day: r.day, time: classTime.get(r.eventId) ?? null, rule: r.label, points: r.points });
+  }
+
   const league = {
     name: config.league.name,
     start: config.league.start,
     end: config.league.end,
     timeZone: tz,
     updatedAt: now,
-    standings: rank(standings(rewards, members.map((m) => m.id)).map((r) => ({ name: name(r.memberId), points: r.points }))),
+    standings: rank(standings(rewards, members.map((m) => m.id)).map((r) => ({
+      name: name(r.memberId),
+      points: r.points,
+      detail: rewardsByMember.get(r.memberId) || [],
+    }))),
   };
 
-  const time = new Intl.DateTimeFormat('es-ES', { timeZone: tz, hour: '2-digit', minute: '2-digit' });
   const rewardsByEvent = new Map();
   for (const r of rewards) {
     if (!rewardsByEvent.has(r.eventId)) rewardsByEvent.set(r.eventId, []);
