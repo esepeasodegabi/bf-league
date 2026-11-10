@@ -118,3 +118,49 @@ test('referidos apuntados a mano usan las fechas de iniciación y alta de la app
     ['referral_signup', 'f9', '2026-10-12T16:40:28.608Z'],
   ]);
 });
+
+// ---- API REST (HAR del 09/11/2026; datos inventados) ----
+const API = 'https://api.brooklynfitboxing.com/v1';
+const restTrainer = { trainerId: 'tr1', name: 'Entrenadora Uno', avatarPath: 'p.jpg', avatarUrl: 'https://x/p.jpg' };
+const restClassBase = {
+  occurrenceId: 'k1', closedClassId: 'k1', globalTime: '2026-11-09T09:30:00.000Z', startsAt: '2026-11-09T08:30:00.000Z',
+  startedAt: '2026-11-09T08:32:21.914Z', finishedAt: '2026-11-09T09:13:51.885Z', off: false, private: false, type: 'FS',
+  bookedCount: 2, firstBookingsCount: 0, availableSpots: null, aggregatorsCount: 0, capacity: 20, averageEnergy: 98.44, trainer: restTrainer,
+};
+const restFitboxer = (id, name) => ({ fitboxerId: id, name, nickname: name.split(' ')[0], email: `${id}@example.com`, status: '5', belongsToClub: true, club: { clubId: 'club', alias: 'CLUB' }, aggregatorId: null, registrationState: null });
+
+test('REST: listado de clases terminadas', () => {
+  const out = parseCapture(
+    { method: 'GET', url: `${API}/class-occurrences?clubId=club&state=closed&dateFrom=2026-11-09&dateTo=2026-11-10&limit=100&offset=0` },
+    { data: [restClassBase], total: 1 },
+  );
+  assert.deepEqual(out.classes, [{
+    id: 'k1', start: '2026-11-09T08:30:00.000Z', end: '2026-11-09T09:13:51.885Z',
+    type: 'FS', capacity: 20, reservations: 2, trainer: { id: 'tr1', name: 'Entrenadora Uno' },
+  }]);
+  assert.deepEqual(out.trainings, []);
+});
+
+test('REST: detalle de una clase con sus asistentes', () => {
+  const detail = {
+    ...restClassBase, club: { clubId: 'club', alias: 'CLUB' }, challengeAlias: 'BR317',
+    workouts: [
+      { sessionId: 's1', fitboxer: restFitboxer('f1', 'Ana  García López'), energy: 99.7, type: 'FS' },
+      { sessionId: 's2', fitboxer: restFitboxer('f2', 'Luis Pérez'), energy: 98.9, type: 'FS' },
+    ],
+    noShow: [{ fitboxerId: 'f3', name: 'Eva Sanz' }],
+    activity: [],
+  };
+  const out = parseCapture({ method: 'GET', url: `${API}/closed-classes/k1` }, detail);
+  assert.equal(out.classes.length, 1);
+  const c = out.classes[0];
+  assert.deepEqual([c.id, c.finished, c.detail, c.attendees, c.sessions, c.noShows], ['k1', true, true, ['f1', 'f2'], { f1: 's1', f2: 's2' }, ['f3']]);
+  assert.deepEqual(out.trainings.map((t) => [t.id, t.memberId, t.endedAt]), [['s1', 'f1', '2026-11-09T09:13:51.885Z'], ['s2', 'f2', '2026-11-09T09:13:51.885Z']]);
+  assert.deepEqual(out.members.map((m) => [m.id, m.firstName, m.lastName]), [['f1', 'Ana', 'García López'], ['f2', 'Luis', 'Pérez']]);
+  assert.ok(!JSON.stringify(stripPersonalData({ ...detail, activity: [{ actor: 'staff@example.com' }] })).includes('@example.com'));
+});
+
+test('REST: otras respuestas de la API no generan datos', () => {
+  const out = parseCapture({ method: 'GET', url: `${API}/auth/me?include=district` }, { userId: 'u', permissions: [{ clubId: 'club' }] });
+  assert.deepEqual(out, { classes: [], trainings: [], members: [], referrals: [] });
+});

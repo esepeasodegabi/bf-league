@@ -89,6 +89,13 @@ $('import').addEventListener('change', async (e) => {
   $('msg').textContent = r.ok ? 'Datos importados.' : `Error: ${r.error}`;
 });
 
+$('clear').addEventListener('click', async () => {
+  if (!confirm('Se borrarán todas las clases, fitboxers, puntos, historial y referidos guardados en este navegador. No se puede deshacer.\n\n¿Vaciar la base de datos?')) return;
+  const r = await send({ type: 'clear' });
+  $('clear-msg').textContent = r.ok ? 'Base de datos vacía.' : `Error: ${r.error}`;
+  renderReferrals();
+});
+
 // ---- Referidos ----
 const fmt = (iso) => (iso ? new Date(iso).toLocaleDateString('es-ES') : '—');
 

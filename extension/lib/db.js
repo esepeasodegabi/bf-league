@@ -71,6 +71,14 @@ export async function exportAll() {
   return out;
 }
 
+/** Vacía todos los datos guardados (capturas, clases, fitboxers, puntos, historial y referidos). La configuración no se toca. */
+export async function clearAll() {
+  const db = await openDb();
+  const tx = db.transaction(Object.keys(STORES), 'readwrite');
+  for (const s of Object.keys(STORES)) tx.objectStore(s).clear();
+  await done(tx);
+}
+
 export async function importAll(dump) {
   const db = await openDb();
   const names = Object.keys(STORES).filter((s) => Array.isArray(dump[s]));

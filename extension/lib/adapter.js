@@ -1,4 +1,15 @@
-// Traduce las respuestas GraphQL de la app de la franquicia a datos de la liga.
+// Traduce las respuestas de la app de la franquicia a datos de la liga.
+//
+// API REST (desde noviembre de 2026, HAR del 09/11/2026), por GET a
+// https://api.brooklynfitboxing.com/v1:
+// - /class-occurrences?clubId&state=closed&dateFrom&dateTo: listado de clases
+//   terminadas ({ data, total }). `startsAt` es la hora de inicio en UTC.
+// - /closed-classes/{id}: detalle de una clase. `workouts` son los fitboxers
+//   que han entrenado, cada uno con su `sessionId`; `noShow` los que no vinieron;
+//   `finishedAt` es la hora real de fin.
+//
+// API GraphQL anterior (hasta octubre de 2026). Se sigue entendiendo para poder
+// importar copias de seguridad antiguas.
 //
 // Consultas conocidas (HAR del 27/10/2026), ambas por POST a /fs1:
 // - classes(from, to, finished): listado de clases con hora, tipo y entrenador.
@@ -28,6 +39,7 @@ function trainerOf(c) {
  */
 export function parseCapture(request, response, { classDurationMinutes = 45 } = {}) {
   const out = { classes: [], trainings: [], members: [], referrals: [] };
+  if (request && typeof request.url === 'string') return parseRest(request.url, response, classDurationMinutes, out);
   const data = response && response.data;
   if (!data) return out;
 
@@ -102,8 +114,65 @@ export function parseCapture(request, response, { classDurationMinutes = 45 } = 
   return out;
 }
 
+const restTrainer = (c) => (c.trainer && c.trainer.trainerId ? { id: c.trainer.trainerId, name: c.trainer.name || '' } : null);
+
+function restClass(c, classDurationMinutes) {
+  const startIso = c.startsAt || c.startedAt;
+  if (!startIso) return null;
+  const start = new Date(startIso).toISOString();
+  const finished = Boolean(c.finishedAt);
+  const end = finished ? new Date(c.finishedAt).toISOString() : new Date(Date.parse(start) + classDurationMinutes * 60000).toISOString();
+  return {
+    id: c.closedClassId || c.occurrenceId,
+    start, end, finished,
+    type: c.type ?? null,
+    capacity: c.capacity ?? null,
+    reservations: c.bookedCount ?? null,
+    trainer: restTrainer(c),
+  };
+}
+
+function parseRest(url, response, classDurationMinutes, out) {
+  let path;
+  try { path = new URL(url).pathname; } catch { return out; }
+  if (!response || typeof response !== 'object') return out;
+
+  if (/\/class-occurrences$/.test(path) && Array.isArray(response.data)) {
+    for (const c of response.data) {
+      if (!c || !(c.closedClassId || c.occurrenceId)) continue;
+      const cls = restClass(c, classDurationMinutes);
+      // El listado no trae asistentes: no se marca como terminada para no pisar el detalle.
+      if (cls) { delete cls.finished; out.classes.push(cls); }
+    }
+  }
+
+  if (/\/closed-classes\/[^/]+$/.test(path) && Array.isArray(response.workouts)) {
+    const cls = restClass(response, classDurationMinutes);
+    if (!cls || !cls.id) return out;
+    const attendees = [];
+    const sessions = {};
+    for (const w of response.workouts) {
+      const f = w && w.fitboxer;
+      const memberId = f && f.fitboxerId;
+      if (!memberId || !w.sessionId) continue;
+      attendees.push(memberId);
+      sessions[memberId] = w.sessionId;
+      out.members.push({ id: memberId, ...splitName(f.name), clientType: f.status ?? null });
+      if (cls.finished) {
+        out.trainings.push({ type: 'training', id: w.sessionId, memberId, classId: cls.id, endedAt: cls.end, valid: true, source: 'class' });
+      }
+    }
+    out.classes.push({
+      ...cls, attendees, sessions,
+      noShows: (response.noShow || []).map((n) => n && (n.fitboxerId || n.fitboxer?.fitboxerId)).filter(Boolean),
+      detail: true,
+    });
+  }
+  return out;
+}
+
 // Datos personales que la liga no necesita y nunca se guardan.
-const PERSONAL = new Set(['eml', 'email', 'tfn', 'phone', 'dni', 'birthdate', 'zipPostalCode', 'city', 'salesForceId', 'payments', 'payment', 'order', 'owner', 'activeOffer', 'pub_api_key', 'gender']);
+const PERSONAL = new Set(['eml', 'email', 'tfn', 'phone', 'dni', 'birthdate', 'zipPostalCode', 'city', 'salesForceId', 'payments', 'payment', 'order', 'owner', 'activeOffer', 'pub_api_key', 'gender', 'activity', 'actor']);
 
 /** Quita datos personales que la liga no necesita antes de guardar nada. */
 export function stripPersonalData(value) {
